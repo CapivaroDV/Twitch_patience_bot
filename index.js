@@ -10,9 +10,6 @@ t = co.getItem('tt');
 ttz = t.replace('#','').split(',');
 var ms = require('ms')
 
-
-// Chama a função ao carregar a tela
-
 console.log(ttz);
 const app = express();
 const port = 3000;
@@ -75,7 +72,6 @@ n.on('message', (channel, tags, message, self) => {
 	}
 
 	if (command === 'add') {
-		// "@alca, heya!"
 		if (!tt.includes(`#${tags.username}`)) {
 			n.say(channel, `@${tags.username}, adicionado || added`);
 			tt.push(`#${tags.username}`);
@@ -93,7 +89,6 @@ n.on('message', (channel, tags, message, self) => {
 	}
 
 	if (command === 'remove') {
-		// "@alca, heya!"
 		if (tt.includes(`#${tags.username}`)) {
 			n.say(channel, `@${tags.username}, removido | removed`);
 			var indice = tt.indexOf(`${tags.username}`);
@@ -135,17 +130,14 @@ n.on('message', (channel, tags, message, self) => {
   }
 
 	if (command === 'salve') {
-		// "@alca, heya!"
 		n.say(channel, `@${tags.username}, e ai!`);
 	}
 
 	if (command === 'sla') {
-		// "@alca, heya!"
 		n.say(channel, `@${tags.username}, se não tem oq falar não fale!`);
 	}
 
-	if (command === 'creator') {
-		// "@alca, heya!"
+	if (command === 'creator') {"
 		n.say(
 			channel,
 			`@${
@@ -154,7 +146,6 @@ n.on('message', (channel, tags, message, self) => {
 		);
 	}
 	if (command === 'teste') {
-		// "@alca, heya!"
 		n.say(channel, `@${tags.username}, testado`);
 	}
 	if (command === 'help') {
@@ -198,7 +189,6 @@ n.on('message', (channel, tags, message, self) => {
 	}
 
 	if (command === 'hello') {
-		// "@alca, heya!"
 		n.say(channel, `@${tags.username}, hi!`);
 	}
 
@@ -207,7 +197,6 @@ n.on('message', (channel, tags, message, self) => {
 	}
 
 	if (command === 'test') {
-		// "@alca, heya!"
 		n.say(channel, `@${tags.username}, tested`);
 	}
 
